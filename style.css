@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #f4f9fd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    color: #010101;
+}
+
+.container{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+}
+
+.button1{
+    padding: 50px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.button{
+    background-color: #d2d2d2;
+    width:100px;
+    height: 50px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+}
+
+.button::before{
+    position: absolute;
+    content: '';
+    background-color: #ffff;
+    width: 45px;
+    height: 40px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+input:checked + .button{
+    background-color: #3bedb7;
+}
+
+input:checked + .button::before{
+    transform: translateX(45px);
+}
+
+input{
+    display: none;
+}
+
+.button2{
+    background-color: #d2d2d2;
+    width: 100px;
+    height: 50px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+}
+
+.button2::before{
+    position: absolute;
+    content: '';
+    background-color: #ffff;
+    width: 45px;
+    height: 40px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+input:checked + .button2{
+    background-color: #3bedb7;
+}
+
+input:checked + .button2::before{
+    transform: translateX(45px);
+}
+
+.button3{
+    background-color: #d2d2d2;
+    width: 100px;
+    height: 50px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+}
+
+.button3::before{
+    position: absolute;
+    content: '';
+    background-color: #ffff;
+    width: 45px;
+    height: 40px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.2s;
+}
+
+input:checked + .button3{
+    background-color: #3bedb7;
+}
+
+input:checked + .button3::before{
+    transform: translateX(45px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .button1 {
+        padding: 20px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .button, .button2, .button3 {
+        width: 80px;
+        height: 40px;
+    }
+    
+    .button::before, .button2::before, .button3::before {
+        width: 35px;
+        height: 30px;
+        margin: 5px;
+    }
+    
+    input:checked + .button::before, 
+    input:checked + .button2::before, 
+    input:checked + .button3::before {
+        transform: translateX(35px);
+    }
+}
